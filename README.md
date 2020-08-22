@@ -5,7 +5,8 @@
 * AnalyticsService - микросервис для подсчета суммы всех балансов
 * mysql - микросервис БД mysql
 * postgres - микросервис БД postgres
-* ppt - презентация
+* ppt - ![Презентация](ppt/ppt.pdf?raw=true "Презентация")
+
 * tests/postman/ - коллекция авто-тестов REST API
 
 ## Архитектурная диаграмма
