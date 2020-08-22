@@ -8,6 +8,7 @@
 * ppt - ![Презентация](ppt/ppt.pdf "Презентация")
 
 * tests/postman/ - коллекция авто-тестов REST API
+* Запись стрима:  ![Видео](https://www.youtube.com/watch?v=_kV799129u8&list=PLXuDKLBD7gUzdBEf6EOqPR7y-glNYjJK7 "Docker для кандидата")
 
 ## Архитектурная диаграмма
 ![Микросервисы](ppt/architecture.png?raw=true)
