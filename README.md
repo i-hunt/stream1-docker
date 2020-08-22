@@ -11,7 +11,11 @@
 
 ## Инструкция по сборке
 1. Выкачайте проект
+```
 git clone git@github.com:i-hunt/stream1-docker.git
+
+cd stream1-docker
+```
 
 2. Установите openjdk (https://openjdk.java.net/install/)
 
@@ -19,7 +23,9 @@ git clone git@github.com:i-hunt/stream1-docker.git
 
 4. Запустите компиляцию исходников и сборку докер образов
 
+```
 ./rebuild.sh
+```
 
 
 5. Установите Postman (https://www.postman.com/downloads/)
