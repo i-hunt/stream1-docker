@@ -25,15 +25,19 @@ cd stream1-docker
 
 3. Установите maven (https://maven.apache.org/install.html)
 
-4. Запустите компиляцию исходников и сборку докер образов
+4. Установите docker (https://docs.docker.com/get-docker/)
+
+5. Установите docker-compose (https://docs.docker.com/compose/install/)
+
+6. Запустите компиляцию исходников и сборку докер образов
 
 ```
 ./rebuild.sh
 ```
 
 
-5. Установите Postman (https://www.postman.com/downloads/)
+7. Установите Postman (https://www.postman.com/downloads/)
 
-6. Загрузите в Postman коллекцию автотестов tests/postman/Docker Stream.postman_collection.json
+8. Загрузите в Postman коллекцию автотестов tests/postman/Docker Stream.postman_collection.json
 
-7. Прогоните  автотесты (там где-то кнопка Run должна быть в Postman'е)
+9. Прогоните  автотесты (там где-то кнопка Run должна быть в Postman'е)
