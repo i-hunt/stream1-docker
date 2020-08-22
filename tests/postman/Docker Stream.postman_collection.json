@@ -1,0 +1,762 @@
+{
+	"info": {
+		"_postman_id": "3a31d3f2-f825-4b5f-b516-f07406b68d59",
+		"name": "Docker Stream",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create customer 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "aab1dc98-f400-4c6c-b0f9-5e0852560fdf",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customerID\": \"123ab\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create customer 1 Duplicate Bad Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "dd293e35-38fd-43f6-b79f-bae2552f9257",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"    pm.response.to.have.status(400);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customerID\": \"123ab\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create customer 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "789787e0-67e7-48a4-8ed6-ee682a976e66",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customerID\": \"456fis\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create customer 3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "941f782d-a784-44d1-8f3e-8f02ac7ad368",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customerID\": \"f892jhd9\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create PREPAID balance for customer 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ea63176a-657f-46ce-924f-0dae12e71eee",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"balanceID\": \"350282\",\n    \"balanceType\": \"PREPAID\",\n    \"value\": 100,\n    \"customerID\": \"123ab\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/balances/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"balances",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create PREPAID balance for customer 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5cec312e-7a91-460c-877b-000845b7c8bf",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"balanceID\": \"dkisdosd\",\n    \"balanceType\": \"PREPAID\",\n    \"value\": 200,\n    \"customerID\": \"456fis\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/balances/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"balances",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create TOPUP balance for customer 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b2b17dd2-09b3-4101-9c7b-c6b2729671b7",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"balanceID\": \"asio230d\",\n    \"balanceType\": \"TOPUP\",\n    \"value\": 300,\n    \"customerID\": \"456fis\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/balances/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"balances",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create PREPAID balance for customer 3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ce82e897-2dcc-43c0-bc82-48ffa14d7eea",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"balanceID\": \"f892jhd9\",\n    \"balanceType\": \"PREPAID\",\n    \"value\": 500,\n    \"customerID\": \"f892jhd9\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/balances/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"balances",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check total balance sum",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4b6c5592-5686-4e44-bbb3-9ced3f5facbd",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"response should be okay to process\", function () {",
+							"    pm.response.to.not.be.error;",
+							"",
+							"    var jsonData = pm.response.json()",
+							"    pm.expect(jsonData).to.deep.equal(JSON.parse('[\"1100\"]'))",
+							"",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9081/total",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9081",
+					"path": [
+						"total"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete PREPAID Balance for customer 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "295cd6b9-d950-48cd-a4a0-c47f9094266c",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/balances/350282",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"balances",
+						"350282"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check total balance without balance for customer 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "69c885e3-845f-4328-96d2-da3f495bc7c9",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"response should be okay to process\", function () {",
+							"    pm.response.to.not.be.error;",
+							"",
+							"    var jsonData = pm.response.json()",
+							"    pm.expect(jsonData).to.deep.equal(JSON.parse('[\"1000\"]'))",
+							"",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9081/total",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9081",
+					"path": [
+						"total"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete PREPAID Balance for customer 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9debe2c3-0cea-40e8-8e86-3b91deec7e9a",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/balances/dkisdosd",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"balances",
+						"dkisdosd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete TOPUP Balance for customer 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9218de0c-632b-487c-8a4d-d98d6191a64f",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/balances/asio230d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"balances",
+						"asio230d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete PREPAID Balance for customer 3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d087aa13-656c-4ab2-a0d2-443e67321273",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/balances/f892jhd9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"balances",
+						"f892jhd9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check total balance sum is zero",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "902bf541-96b5-426d-bba8-1cd4586ff2f0",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"response should be okay to process\", function () {",
+							"    pm.response.to.not.be.error;",
+							"",
+							"    var jsonData = pm.response.json()",
+							"    pm.expect(jsonData).to.deep.equal(JSON.parse('[\"0\"]'))",
+							"",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9081/total",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9081",
+					"path": [
+						"total"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete customer 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "52e014bd-21c7-4a4d-b5c8-ac93e5b48d30",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/customers/123ab",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"customers",
+						"123ab"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete customer 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "19660aea-b3b3-49df-a8a9-f77ee6e9cdd9",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/customers/456fis",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"customers",
+						"456fis"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete customer 3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "409f57b9-6b4c-4e5f-9175-9f03524b93d3",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/customers/f892jhd9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"customers",
+						"f892jhd9"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

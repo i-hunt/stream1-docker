@@ -1,0 +1,10 @@
+.idea*
+.gradle*
+*.iml
+*.class
+.mvn*
+AccountService/target
+AccountService/.travis.yml
+AccountService/gradle
+*DS_Store
+AnalyticsService/app/__pycache__
